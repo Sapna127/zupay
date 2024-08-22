@@ -8,11 +8,16 @@ const Header = () => {
         <div className="text-2xl font-bold">
           <Link to="/">My Blog</Link>
         </div>
-    
+
         <div>
           <Link to="/add-blog">
             <button className="bg-white text-blue-600 px-4 py-2 rounded-md shadow-md hover:bg-gray-100">
               + New Blog
+            </button>
+          </Link>
+          <Link to="/sign-in">
+            <button className="bg-white text-blue-600 px-4 py-2 rounded-md shadow-md hover:bg-gray-100 ml-2">
+              Sign In
             </button>
           </Link>
         </div>

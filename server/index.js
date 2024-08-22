@@ -22,6 +22,10 @@ app.get('/api/v1/test', (req, res) => {
 const blogRoutes = require('./routes/blogRoutes');
 app.use('/api/v1/blogs', blogRoutes);
 
+//user routes
+const userRoutes = require('./routes/userRoutes');
+app.use('/api/v1/user', userRoutes);
+
 // Start Server
 const PORT = process.env.PORT || 3000;
 const server = http.createServer(app);

@@ -12,7 +12,7 @@ function Home() {
       <div className="space-x-4">
         <Link to="/add-blog">
           <button className="bg-black text-white py-5 px-10 rounded font-semibold hover:bg-gray-900">
-            Add Blog
+            + Add Blog
           </button>
         </Link>
         <Link to="/blogs">
