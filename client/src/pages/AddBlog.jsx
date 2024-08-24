@@ -9,7 +9,7 @@ function AddBlog() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:3000/api/v1/blogs', {
+    const response = await fetch('https://zupay-al2k.vercel.app/api/v1/blogs', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, subtitle, desc })

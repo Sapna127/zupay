@@ -8,7 +8,7 @@ const AllBlogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/blogs');
+        const response = await axios.get('https://zupay-al2k.vercel.app/api/v1/blogs');
         console.log(response.data);
         setBlogs(response.data);
       } catch (error) {

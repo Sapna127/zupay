@@ -39,7 +39,7 @@ const BlogDetails = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/api/v1/blogs/${id}`, editedBlog);
+      await axios.put(`https://zupay-al2k.vercel.app/api/v1/blogs/${id}`, editedBlog);
       setBlog(editedBlog);
       setIsEditing(false);
     } catch (error) {
