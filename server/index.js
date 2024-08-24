@@ -26,6 +26,10 @@ app.use('/api/v1/blogs', blogRoutes);
 const userRoutes = require('./routes/userRoutes');
 app.use('/api/v1/user', userRoutes);
 
+//search routes
+// const searchRoutes = require('./routes/searchRoutes');
+// app.use('/api/v1/blogs', searchRoutes);
+
 // Start Server
 const PORT = process.env.PORT || 3000;
 const server = http.createServer(app);
