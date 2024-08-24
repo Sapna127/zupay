@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const Header = ({  }) => {
+const Header = ({ handleSearch }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearchChange = (event) => {

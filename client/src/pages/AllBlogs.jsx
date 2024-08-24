@@ -2,22 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const AllBlogs = () => {
-  const [blogs, setBlogs] = useState([]);
-
+const AllBlogs = ({ blogs, setBlogs }) => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get('https://zupay-al2k.vercel.app/api/v1/blogs');
-        console.log(response.data);
+        console.log('All blogs:', response.data);
         setBlogs(response.data);
       } catch (error) {
         console.error('Error fetching blogs', error);
       }
     };
 
-    fetchBlogs();
-  }, []);
+    if (blogs.length === 0) {
+      fetchBlogs();
+    }
+  }, [blogs, setBlogs]);
 
   return (
     <div className="container mx-auto py-8">
